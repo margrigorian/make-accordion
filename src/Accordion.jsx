@@ -1,4 +1,5 @@
 import React from "react";
+import style from "./Accordion.module.css";
 import Toggle from "./Toggle";
 
 class Accordion extends React.Component{
@@ -30,7 +31,7 @@ class Accordion extends React.Component{
 
     render() {
         return (
-            <div>
+            <div className={style.container}>
                 {this.state.accoridion.map((item, i) => (
                     <Toggle key={`Section-${item.id}`} header={item.header} content={item.content}/>
                 ))}
